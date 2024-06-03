@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Player</title>
+</head>
+<body>
+    <iframe id="embeddedPlayer" src="https://player003.vip/embed2.php?id=starsp2&q=Star%20Sports%202" width="100%" height="500" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
+
+    <script>
+        document.getElementById('embeddedPlayer').addEventListener('load', function() {
+            var iframe = document.getElementById('embeddedPlayer');
+
+            try {
+                // Attempt to add an event listener within the iframe context
+                iframe.contentWindow.document.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    console.log('Click event detected and prevented.');
+                }, true);
+            } catch (e) {
+                console.log('Cross-origin restriction: Unable to add event listener to the iframe.');
+            }
+        });
+    </script>
+</body>
+</html>
