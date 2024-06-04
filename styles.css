@@ -102,9 +102,9 @@ html, body {
 
 .button-container {
   position: relative;
-  top: 27%;
-  margin-left: 18%;
-  margin-right: 18%;
+  top: 30%;
+  margin-left: 15%;
+  margin-right: 15%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
